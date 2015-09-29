@@ -7,6 +7,4 @@ end
 
 target 'XCTUIBridge_Tests', :exclusive => true do
   pod "XCTUIBridge", :path => "../"
-
-  
 end

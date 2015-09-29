@@ -1,0 +1,14 @@
+PODS:
+  - XCTUIBridge (0.1.0)
+
+DEPENDENCIES:
+  - XCTUIBridge (from `../`)
+
+EXTERNAL SOURCES:
+  XCTUIBridge:
+    :path: ../
+
+SPEC CHECKSUMS:
+  XCTUIBridge: 756f0e3451cd442ba965ab8df3a440852ff15852
+
+COCOAPODS: 0.39.0.beta.4
