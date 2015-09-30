@@ -8,3 +8,7 @@ end
 target 'XCTUIBridge_Tests', :exclusive => true do
   pod "XCTUIBridge", :path => "../"
 end
+
+target 'XCTUIBridge_ExampleUITests', :exclusive => true do
+  pod 'XCTUIBridge', :path => "../"
+end

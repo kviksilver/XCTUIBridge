@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CCB0106DE408212C676BBF4C'
+               BlueprintIdentifier = 'B0F3A1F92DE2DBE69C196618'
                BlueprintName = 'XCTUIBridge'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'XCTUIBridge.framework'>

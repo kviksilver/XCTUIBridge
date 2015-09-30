@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27928730252D1FCFF007CF06 /* Pods_XCTUIBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F403BC01A60FDFFB8D3DE37F /* Pods_XCTUIBridge_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A18DA549825AA3EEA0376FB /* Pods_XCTUIBridge_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D861DB6A75AABA7FBF3FFB0 /* Pods_XCTUIBridge_ExampleUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C20A229549E24FB736137DD8 /* Pods_XCTUIBridge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BB0113A5C5652DFA96C58 /* Pods_XCTUIBridge_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ECE3E2761BBB610500CB0913 /* XCTUIBridge_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3E2751BBB610500CB0913 /* XCTUIBridge_ExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +27,22 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = XCTUIBridge;
 		};
+		ECE3E2781BBB610500CB0913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = XCTUIBridge_Example;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A11FE793B3F9711CDB3D6FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		137C84C211DDB42BB836FE7E /* Pods-XCTUIBridge_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_ExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_ExampleUITests/Pods-XCTUIBridge_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1ADFA24FA18694C1DBA6DC82 /* XCTUIBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XCTUIBridge.podspec; path = ../XCTUIBridge.podspec; sourceTree = "<group>"; };
 		273260F2E06E8AF4F1096CC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		369CE059D657A28556369EC9 /* Pods-XCTUIBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_Tests/Pods-XCTUIBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5D861DB6A75AABA7FBF3FFB0 /* Pods_XCTUIBridge_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCTUIBridge_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* XCTUIBridge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCTUIBridge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,13 +50,17 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = XCTUIBridge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* XCTUIBridge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTUIBridge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6493D2DA1B803B229C3A5C04 /* Pods-XCTUIBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_Tests/Pods-XCTUIBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A7BB0113A5C5652DFA96C58 /* Pods_XCTUIBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCTUIBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B952AEB56928C21C44A71575 /* Pods-XCTUIBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_Example/Pods-XCTUIBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BB26821FD9E396DD2166F1B5 /* Pods-XCTUIBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_Example/Pods-XCTUIBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D3F608C20924D4D1CB102AA0 /* Pods-XCTUIBridge_ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCTUIBridge_ExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCTUIBridge_ExampleUITests/Pods-XCTUIBridge_ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ECE3E2731BBB610500CB0913 /* XCTUIBridge_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTUIBridge_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE3E2751BBB610500CB0913 /* XCTUIBridge_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTUIBridge_ExampleUITests.swift; sourceTree = "<group>"; };
+		ECE3E2771BBB610500CB0913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F403BC01A60FDFFB8D3DE37F /* Pods_XCTUIBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCTUIBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +81,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE3E2701BBB610500CB0913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A18DA549825AA3EEA0376FB /* Pods_XCTUIBridge_ExampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +98,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for XCTUIBridge */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				ECE3E2741BBB610500CB0913 /* XCTUIBridge_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				912F970DD28F75F853EBD276 /* Pods */,
 				D07C4E63DA3216467644E13F /* Frameworks */,
@@ -85,7 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* XCTUIBridge_Example.app */,
-				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				607FACE51AFB9204008FA782 /* XCTUIBridge_Tests.xctest */,
+				ECE3E2731BBB610500CB0913 /* XCTUIBridge_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +171,8 @@
 				BB26821FD9E396DD2166F1B5 /* Pods-XCTUIBridge_Example.release.xcconfig */,
 				6493D2DA1B803B229C3A5C04 /* Pods-XCTUIBridge_Tests.debug.xcconfig */,
 				369CE059D657A28556369EC9 /* Pods-XCTUIBridge_Tests.release.xcconfig */,
+				137C84C211DDB42BB836FE7E /* Pods-XCTUIBridge_ExampleUITests.debug.xcconfig */,
+				D3F608C20924D4D1CB102AA0 /* Pods-XCTUIBridge_ExampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -155,8 +182,18 @@
 			children = (
 				7A7BB0113A5C5652DFA96C58 /* Pods_XCTUIBridge_Example.framework */,
 				F403BC01A60FDFFB8D3DE37F /* Pods_XCTUIBridge_Tests.framework */,
+				5D861DB6A75AABA7FBF3FFB0 /* Pods_XCTUIBridge_ExampleUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECE3E2741BBB610500CB0913 /* XCTUIBridge_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3E2751BBB610500CB0913 /* XCTUIBridge_ExampleUITests.swift */,
+				ECE3E2771BBB610500CB0913 /* Info.plist */,
+			);
+			path = XCTUIBridge_ExampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +237,28 @@
 			);
 			name = XCTUIBridge_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* XCTUIBridge_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECE3E2721BBB610500CB0913 /* XCTUIBridge_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECE3E27A1BBB610500CB0913 /* Build configuration list for PBXNativeTarget "XCTUIBridge_ExampleUITests" */;
+			buildPhases = (
+				C710B960D634627D55D1C40B /* Check Pods Manifest.lock */,
+				ECE3E26F1BBB610500CB0913 /* Sources */,
+				ECE3E2701BBB610500CB0913 /* Frameworks */,
+				ECE3E2711BBB610500CB0913 /* Resources */,
+				EA703543D899936F1BA10FBF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECE3E2791BBB610500CB0913 /* PBXTargetDependency */,
+			);
+			name = XCTUIBridge_ExampleUITests;
+			productName = XCTUIBridge_ExampleUITests;
+			productReference = ECE3E2731BBB610500CB0913 /* XCTUIBridge_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -218,6 +275,10 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					ECE3E2721BBB610500CB0913 = {
+						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -237,6 +298,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* XCTUIBridge_Example */,
 				607FACE41AFB9204008FA782 /* XCTUIBridge_Tests */,
+				ECE3E2721BBB610500CB0913 /* XCTUIBridge_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +315,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE3E2711BBB610500CB0913 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,6 +347,21 @@
 			showEnvVarsInLog = 0;
 		};
 		46E8A5923FC3857360C29D76 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C710B960D634627D55D1C40B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,6 +436,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		EA703543D899936F1BA10FBF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XCTUIBridge_ExampleUITests/Pods-XCTUIBridge_ExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -372,6 +471,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE3E26F1BBB610500CB0913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE3E2761BBB610500CB0913 /* XCTUIBridge_ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -379,6 +486,11 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* XCTUIBridge_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		ECE3E2791BBB610500CB0913 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* XCTUIBridge_Example */;
+			targetProxy = ECE3E2781BBB610500CB0913 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -438,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -476,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -491,6 +603,7 @@
 				INFOPLIST_FILE = XCTUIBridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kviksilver.XCTUIBridge-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -503,6 +616,7 @@
 				INFOPLIST_FILE = XCTUIBridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kviksilver.XCTUIBridge-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -543,6 +657,34 @@
 			};
 			name = Release;
 		};
+		ECE3E27B1BBB610500CB0913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 137C84C211DDB42BB836FE7E /* Pods-XCTUIBridge_ExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = XCTUIBridge_ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kviksilver.XCTUIBridge-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XCTUIBridge_Example;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ECE3E27C1BBB610500CB0913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F608C20924D4D1CB102AA0 /* Pods-XCTUIBridge_ExampleUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = XCTUIBridge_ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kviksilver.XCTUIBridge-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XCTUIBridge_Example;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +711,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE3E27A1BBB610500CB0913 /* Build configuration list for PBXNativeTarget "XCTUIBridge_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE3E27B1BBB610500CB0913 /* Debug */,
+				ECE3E27C1BBB610500CB0913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
