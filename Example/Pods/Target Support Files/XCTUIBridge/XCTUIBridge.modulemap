@@ -1,6 +1,0 @@
-framework module XCTUIBridge {
-  umbrella header "XCTUIBridge-umbrella.h"
-
-  export *
-  module * { export * }
-}
