@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for XCTUIBridge */,
 				607FACE81AFB9204008FA782 /* Tests */,
-				ECE3E2741BBB610500CB0913 /* UITests */,
+				607FACD21AFB9204008FA782 /* Example app */,
+				ECE3E2741BBB610500CB0913 /* Example UITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				912F970DD28F75F853EBD276 /* Pods */,
 				D07C4E63DA3216467644E13F /* Frameworks */,
@@ -115,7 +115,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for XCTUIBridge */ = {
+		607FACD21AFB9204008FA782 /* Example app */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -125,7 +125,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for XCTUIBridge";
+			name = "Example app";
 			path = XCTUIBridge;
 			sourceTree = "<group>";
 		};
@@ -187,13 +187,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ECE3E2741BBB610500CB0913 /* UITests */ = {
+		ECE3E2741BBB610500CB0913 /* Example UITests */ = {
 			isa = PBXGroup;
 			children = (
 				ECE3E2751BBB610500CB0913 /* ExampleUITests.swift */,
 				ECE3E2771BBB610500CB0913 /* Info.plist */,
 			);
-			name = UITests;
+			name = "Example UITests";
 			path = XCTUIBridge_ExampleUITests;
 			sourceTree = "<group>";
 		};
@@ -268,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -536,6 +536,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -627,16 +628,14 @@
 			baseConfigurationReference = 6493D2DA1B803B229C3A5C04 /* Pods-XCTUIBridge_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCTUIBridge_Example.app/XCTUIBridge_Example";
 			};
@@ -647,12 +646,10 @@
 			baseConfigurationReference = 369CE059D657A28556369EC9 /* Pods-XCTUIBridge_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCTUIBridge_Example.app/XCTUIBridge_Example";
 			};

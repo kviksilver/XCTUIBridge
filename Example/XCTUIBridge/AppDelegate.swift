@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import XCTUIBridge
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, XCTUIBridgeDelegate {
 
     var window: UIWindow?
+    var bridge: XCTUIBridge?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        bridge = XCTUIBridge(delegate: self)
         return true
     }
 
@@ -41,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    //MARK: XCTUIBridgeDelegate
+    
+    func bridgeReceivedMessage(message: XCTUIBridgeMessage) -> XCTUIBridgePayload? {
+        return nil
+    }
 
 }
 
