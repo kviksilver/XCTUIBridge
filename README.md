@@ -22,7 +22,7 @@ pod "XCTUIBridge"
 
 ## Author
 
-kviksilver, berceg@gmail.com
+@kviksilver
 
 ## License
 
