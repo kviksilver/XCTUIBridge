@@ -22,6 +22,12 @@ class ViewController: UIViewController {
             }
         }
         
+        
+        let removeMe = XCTUIBridge.register("removed") {
+            assert(false, "this was not supposed to be called as we canceled this callback")
+        }
+        removeMe()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

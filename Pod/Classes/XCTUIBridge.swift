@@ -11,9 +11,9 @@ import Foundation
 public typealias XCTUIBridgeRemover = () -> Void;
 public typealias XCTUIBridgeCallback = () -> Void;
 
-let instance = XCTUIBridge()
+private let instance = XCTUIBridge()
 
-class XCTUIBridgeCallbackContainer {
+private class XCTUIBridgeCallbackContainer {
     let completion:XCTUIBridgeCallback
     init(completion: XCTUIBridgeCallback) {
         self.completion = completion
@@ -21,7 +21,9 @@ class XCTUIBridgeCallbackContainer {
 }
 
 public class XCTUIBridge {
+    
     private var clientListeners = [String: NSMutableArray]();
+    
     func notificationRecieved(name:String) {
         if let listeners = clientListeners[name] {
             for var i = 0; i < listeners.count; i++ {

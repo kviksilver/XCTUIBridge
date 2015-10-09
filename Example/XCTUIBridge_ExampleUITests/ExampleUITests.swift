@@ -29,12 +29,17 @@ class ExampleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func test_basicExample() {
         XCUIApplication().buttons["Button"].tap()
-        
         XCTUIBridge.sendNotification("test")
-        
         XCUIApplication().buttons["wow"].tap()
+    }
+    
+    func test_basicExample_withRemovedCallback() {
+        XCUIApplication().buttons["Button"].tap()
+        //this should not be received
+        XCTUIBridge.sendNotification("removed")
+        
     }
     
 }
