@@ -11,7 +11,6 @@ import Foundation
 public typealias XCTUIBridgeRemover = () -> Void;
 public typealias XCTUIBridgeCallback = () -> Void;
 
-let XCTUIBridgeNotification = "XCTUIBridgeNotification"
 let instance = XCTUIBridge()
 
 class XCTUIBridgeCallbackContainer {
@@ -23,18 +22,11 @@ class XCTUIBridgeCallbackContainer {
 
 public class XCTUIBridge {
     private var clientListeners = [String: NSMutableArray]();
-    
-    private init() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("notificationRecieved:"), name: XCTUIBridgeNotification, object: nil)
-    }
-
-    func notificationRecieved(notification:NSNotification) {
-        if let payload = notification.userInfo,
-            identifier = payload["name"] as? String,
-            listeners = clientListeners[identifier] {
-                for var i = 0; i < listeners.count; i++ {
-                    (listeners.objectAtIndex(i) as? XCTUIBridgeCallbackContainer)?.completion()
-                }
+    func notificationRecieved(name:String) {
+        if let listeners = clientListeners[name] {
+            for var i = 0; i < listeners.count; i++ {
+                (listeners.objectAtIndex(i) as? XCTUIBridgeCallbackContainer)?.completion()
+            }
         }
     }
     
@@ -60,13 +52,12 @@ public class XCTUIBridge {
     
     static private func registerForDarwinNotification(identifier: String) {
         let callback: @convention(block) (CFNotificationCenter!, UnsafeMutablePointer<Void>, CFString!, UnsafePointer<Void>, CFDictionary!) -> Void = { (center, observer, name, object, userInfo) in
-            if let name = name {
-                NSNotificationCenter.defaultCenter().postNotificationName(XCTUIBridgeNotification, object: nil, userInfo: ["name":name])
-            }
+            instance.notificationRecieved(identifier)
         }
         
         let imp: COpaquePointer = imp_implementationWithBlock(unsafeBitCast(callback, AnyObject.self))
         let notificationCallback = unsafeBitCast(imp, CFNotificationCallback.self)
+        
         
         CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), unsafeAddressOf(self), notificationCallback, identifier, nil, .DeliverImmediately)
     }
