@@ -10,7 +10,6 @@ import XCTest
 import XCTUIBridge
 
 class ExampleUITests: XCTestCase {
-    let bridge = XCTUIBridge()
     
     override func setUp() {
         super.setUp()
@@ -31,11 +30,8 @@ class ExampleUITests: XCTestCase {
     }
     
     func testExample() {
-        
-        let expectation = expectationWithDescription("111")
-        bridge.sendMessage(XCTUIBridgeMessage(selector: Selector("aaaa"))) { (dictionary) -> Void in
-            expectation.fulfill()
-        }
+        _ = expectationWithDescription("111")
+        XCTUIBridge.sendNotification("test")
         waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
