@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XCTUIBridge
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-     
-        _ = XCTUIBridge.register("test") { () -> Void in
-            print("got notification")
-        }
-        
+
         return true
     }
 

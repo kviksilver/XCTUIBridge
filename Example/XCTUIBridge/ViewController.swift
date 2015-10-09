@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import XCTUIBridge
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        _ = XCTUIBridge.register("test") { [weak self] in
+            if let weakSelf = self {
+                weakSelf.button.setTitle("wow", forState: .Normal)
+            }
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

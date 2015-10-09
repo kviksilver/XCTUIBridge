@@ -30,9 +30,11 @@ class ExampleUITests: XCTestCase {
     }
     
     func testExample() {
-        _ = expectationWithDescription("111")
+        XCUIApplication().buttons["Button"].tap()
+        
         XCTUIBridge.sendNotification("test")
-        waitForExpectationsWithTimeout(1000, handler: nil)
+        
+        XCUIApplication().buttons["wow"].tap()
     }
     
 }
