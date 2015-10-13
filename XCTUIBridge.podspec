@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/kviksilver/XCTUIBridge"
   s.license          = 'MIT'
   s.author           = { "kviksilver" => "berceg@gmail.com" }
-  s.source           = { :git => "https://github.com/kviksilver/XCTUIBridge.git", :branch => 'master' }
+  s.source           = { :git => "https://github.com/kviksilver/XCTUIBridge.git", :tag => s.version.to_s }
 
 
   s.platform     = :ios, '8.0'
